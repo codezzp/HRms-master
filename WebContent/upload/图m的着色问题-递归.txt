@@ -1,0 +1,66 @@
+#include<stdio.h>
+#define N 100
+int color[N]={0};
+int num,m;
+int map[N][N]; 
+	/*{0,1,1,0,1,
+    1,0,1,0,1,
+    1,1,0,1,0,
+    0,0,1,0,1,
+    1,1,0,1,0};//五个点，七条边的图，邻接矩阵表示
+    */
+void input()
+{
+	printf("输入顶点数n和着色数m:\n");
+	scanf("%d %d",&num,&m);
+	printf("输入无向图的邻接矩阵:\n");
+	for(int i=0;i<num;i++)
+		for(int j=0;j<num;j++)
+			scanf("%d",&map[i][j]);
+}
+
+/**给第n个点着色 ,col=1表示已经着色，col=0表示未着色 ,sign=0表示未验证，sign=1表示已验证且可行 **/
+/*
+ 有以下三种情况：col    sign
+ 0       0//未着色 ，则着色
+ 1       0//已着色但未验证
+ 1       1//着色且此色可用
+ 当n=N-1,即最后一位时，若此时col==1,sign==1，则可打印输出
+*/   
+void inputColor(int n,int *color,int col,int sign){
+    int i;
+    for(i=n+1;i<num;i++)//消除之前着色的痕迹
+        color[i] = 0;
+    if(col == 0){//未着色 ，则着色
+        for(i=1;i<=m;i++){//颜色1-4
+            color[n] = i;
+//            printf("测试:");
+//            for(int p = 0;p < N;p++)
+//                printf("%d\t",color[p]);
+//            printf("测试\n");
+            inputColor(n,color,1,0);//验证着此色是否可行           
+        }
+    }
+    else if(col==1 && sign==0){//已着色但未验证 ，则验证此位
+        for(i=0;i<num;i++)
+            if(map[n][i]==1 && color[n]==color[i])
+                return;
+        inputColor(n,color,1,1);//此色可用，sign置为1
+    }
+    else if(col==1 && sign==1){//着色且此色可用
+        if(n<num-1)//进行下一位
+            inputColor(n+1,color,0,0);
+        else if(n==num-1){//若此位是最后一位，则打印输出
+            for(i=0;i<num;i++)
+                printf("%d ",color[i]);
+            printf("\n");
+        }
+    }   
+}
+
+int main(){
+    input();
+    printf("着色所有可能的解:\n");
+    inputColor(0,color,0,0);
+    return 0;
+}

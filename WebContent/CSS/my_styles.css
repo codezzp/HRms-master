@@ -1,0 +1,156 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #F0F0F0;
+	margin-left: 0;
+	margin-top: 0;
+	margin-width: 0;
+	margin-height: 0;
+	margin: 0px;
+	color: #000000;
+	font-family: 黑体;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+#container {
+	padding: 10px;
+}
+
+#head {
+	width: 60%;
+	text-align: left;
+	float: left;
+}
+
+#head_button {
+	width: 20%;
+	position: absolute;
+	top: 55;
+	right: 5;
+	text-align: right;
+	float: right;
+}
+
+#banner {
+	background-color: #61a7e7;
+	padding: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	clear: both;
+}
+
+#menu {
+	width: 15%;
+	height: 80%;
+	background-color: rgb(97, 167, 231);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+	color: #F0F0F0;
+	float: left;
+}
+
+#content {
+	width: 82%;
+	height: 80%;
+	/*border: 1px solid #000000;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+	font-size: 15px;
+	float: right;
+	overflow: auto; /*溢出元素内容区会出现滚动条*/
+}
+
+#links {
+	background-color: #61a7e7;
+	padding: 5px;
+	text-align: center;
+	clear: both;
+}
+
+#footer {
+	background-color: rgb(97, 167, 231);
+	padding: 5px;
+	text-align: center;
+	clear: both;
+}
+
+big_head {
+	font-family: 楷体;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.head_button {
+	background-color: #F0F0F0;
+	border: none;
+	font-family: 黑体;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.banner_button {
+	background-color: rgb(97, 167, 231);
+	border: 1px solid rgb(97, 167, 231);
+	border-radius: 2px; /*圆角边框*/
+	text-shadow: 0 0 1px;
+	text-align: center;
+	color: #F0F0F0;
+	font-family: 黑体;
+	font-size: 15px;
+}
+
+.menu_button {
+	width: 100%;
+	background-color: rgb(97, 167, 231);
+	outline: none;
+	border: 1px solid rgb(97, 167, 231);
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	color: #F0F0F0;
+	font-family: 黑体;
+	font-size: 20px;
+}
+
+.input {
+	width: 300px;
+	height: 30px;
+	background-color: #FFFFFF;
+	outline: none; /*轮廓线,位于边框边缘的外围，不会占据空间*/
+	border-top: 1px solid #86748d;
+	border-left: 1px solid #86748d;
+	border-right: 1px solid #86748d;
+	border-bottom: 1px solid #86748d;
+	border-radius: 5px; /*圆角边框*/
+	padding-left: 10px;
+	padding-right: 10px;
+	/*margin-bottom: 10px;*/
+	text-align: left;
+	color: #000000;
+	font-family: 黑体;
+	font-size: 15px;
+}
+
+.content_button {
+	width: 40%;
+	background-color: rgb(97, 167, 231);
+	border: 1px solid rgb(97, 167, 231);
+	border-radius: 5px; /*圆角边框*/
+	padding: 9px 14px;
+	margin: 0;
+	/*margin-top: 10px;
+	margin-bottom: 10px;*/
+	min-height: 20px; /*最小高度20px*/
+	line-height: normal; /*行高*/
+	text-align: center;
+	color: #F0F0F0;
+	font-family: 黑体;
+	font-size: 15px;
+}
