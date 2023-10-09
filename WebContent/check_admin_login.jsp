@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <%@ page import="java.sql.*" import="java.util.*"%>
+=======
+<%@page import="java.sql.*" import="java.util.*"%>
+>>>>>>> cfa12f2 (张志朋第一次提交)
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%

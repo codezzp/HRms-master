@@ -38,7 +38,11 @@
             size="10" maxlength="8" />
     <img src="PictureCheckCode" id="CreateCheckCode" align="middle">
     <a onclick="myReload()"> 看不清,换一个</a>
+<<<<<<< HEAD
 	</p>
+=======
+    </p>
+>>>>>>> cfa12f2 (张志朋第一次提交)
     
     <p><input type="submit" value="登录"> <input type="reset" value="重置"></p>
     <p><a href="admin_register.jsp">注册</a></p>

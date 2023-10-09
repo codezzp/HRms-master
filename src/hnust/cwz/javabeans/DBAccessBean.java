@@ -4,9 +4,15 @@ import java.sql.*;
 
 public class DBAccessBean {
 	private String drv = "com.mysql.cj.jdbc.Driver";
+<<<<<<< HEAD
 	private String url = "jdbc:mysql://localhost:3306/db_simhr?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT&allowPublicKeyRetrieval=true";
 	private String usr = "root";
 	private String pwd = "root";
+=======
+	private String url = "jdbc:mysql://localhost:3306/hr?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT&allowPublicKeyRetrieval=true";
+	private String usr = "root";
+	private String pwd = "123456";
+>>>>>>> cfa12f2 (å¼ å¿—æœ‹ç¬¬ä¸€æ¬¡æäº¤)
 	private Connection conn = null;
 	private Statement stmt = null;
 	private ResultSet rs = null;
@@ -84,7 +90,11 @@ public class DBAccessBean {
             b = true;
         } catch (Exception e) {
             // TODO: handle exception
+<<<<<<< HEAD
             System.out.println("ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½");
+=======
+            System.out.println("Êı¾İ¿âÁ¬½ÓÊ§°Ü");
+>>>>>>> cfa12f2 (å¼ å¿—æœ‹ç¬¬ä¸€æ¬¡æäº¤)
             e.printStackTrace();
         }
 		return b;
@@ -98,7 +108,11 @@ public class DBAccessBean {
 		}
 	}
 
+<<<<<<< HEAD
 	public boolean update(String sql) {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½
+=======
+	public boolean update(String sql) {//°üº¬Ôö¡¢É¾¡¢¸Ä
+>>>>>>> cfa12f2 (å¼ å¿—æœ‹ç¬¬ä¸€æ¬¡æäº¤)
 		boolean b = false;
 		try {
 			stmt = conn.createStatement();
